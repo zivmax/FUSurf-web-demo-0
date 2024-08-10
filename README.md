@@ -1,6 +1,6 @@
 # FUSurf
 
-This is the repository that contains source code for the [FUSurf website](https://nerfies.github.io).
+This is the repository that contains source code for the [FUSurf website]( https://zivmax.github.io/FUSurf-web-demo-0/).
 
 If you find FUSurf useful for your work please cite:
 
