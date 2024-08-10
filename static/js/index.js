@@ -6,7 +6,7 @@ var NUM_INTERP_FRAMES = 82;
 var interp_images = [];
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + "/" + String(i+1).padStart(6, "0") + ".jpg";
+    var path = INTERP_BASE + "/" + String(i + 1).padStart(6, "0") + ".jpg";
     interp_images[i] = new Image();
     interp_images[i].src = path;
   }
@@ -26,8 +26,6 @@ $(document).ready(function () {
   var options = {
     slidesToScroll: 1,
     slidesToShow: 3,
-    loop: true,
-    infinite: true,
     autoplay: false,
     autoplaySpeed: 3000,
   };
@@ -35,13 +33,6 @@ $(document).ready(function () {
   var carousels = bulmaCarousel.attach(".carousel", options);
   for (var i = 0; i < carousels.length; i++) {
     carousels[i].on("before:show", (state) => {
-      console.log(state);
-    });
-  }
-
-  var element = document.querySelector("#my-element");
-  if (element && element.bulmaCarousel) {
-    element.bulmaCarousel.on("before-show", function (state) {
       console.log(state);
     });
   }
