@@ -4,21 +4,6 @@
 @import "./bulma-carousel.min.css";
 @import "./bulma-slider.min.css";
 
-@font-face {
-  font-family: "Noto Sans";
-  src: url("/fonts/noto-sans-variable-font-wdth-wght.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans";
-  src: url("/fonts/noto-sans-italic-variable-font-wdth-wght.woff2")
-    format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-}
-
 body {
   font-family: "Noto Sans", sans-serif;
 }
