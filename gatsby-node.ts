@@ -24,11 +24,11 @@ export const onCreateWebpackConfig: GatsbyNode["onCreateWebpackConfig"] = ({
       module: {
         rules: [
           {
-            test: /scrollreveal/,
+            test: /bulma-carousel/,
             use: loaders.null(),
           },
           {
-            test: /plotly.js-finance-dist/,
+            test: /bulma-slider/,
             use: loaders.null(),
           }
         ],
