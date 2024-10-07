@@ -13,10 +13,6 @@ interface MdxPageProps {}
 const MDXPage: React.FC<MdxPageProps> = () => {
   return (
     <>
-      <Script src="/js/bulma-carousel.min.js" />
-      <Script src="/js/bulma-slider.min.js" />
-      <Script src="/js/index.js" />
-
       <Hero />
       <div className="container is-max-desktop">
         <MDXProvider components={components}>
