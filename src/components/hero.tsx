@@ -89,7 +89,7 @@ const AuthorList: React.FC<AuthorListProps> = ({ authors, institution }) => (
       {authors.map(([name, link], index) => (
         <span className="author-block" key={index}>
           {link ? <a href={link}>{name}</a> : name}
-          {index < authors.length - 1 && ","}
+          {index < authors.length - 1 && ", "}
         </span>
       ))}
     </div>
