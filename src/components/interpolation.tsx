@@ -7,6 +7,7 @@ interface InterpolationProps {
   numFrames: number;
   startImage: string;
   endImage: string;
+  imageFormat: string;
   children?: React.ReactNode;
 }
 
@@ -15,6 +16,7 @@ const Interpolation: React.FC<InterpolationProps> = ({
   numFrames,
   startImage,
   endImage,
+  imageFormat,
 }) => {
   const [interpImages, setInterpImages] = React.useState<HTMLImageElement[]>(
     []
@@ -24,7 +26,10 @@ const Interpolation: React.FC<InterpolationProps> = ({
   React.useEffect(() => {
     const images: HTMLImageElement[] = [];
     for (let i = 0; i < numFrames; i++) {
-      const path = `${basePath}/${String(i + 1).padStart(6, "0")}.jpg`;
+      const path = `${basePath}/${String(i + 1).padStart(
+        6,
+        "0"
+      )}.${imageFormat}`;
       const img = new Image();
       img.src = path;
       images[i] = img;
