@@ -16,7 +16,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@iconify/react": "^5.0.2",
     "@mdx-js/react": "^3.0.1",
+    "bulma": "^1.0.2",
+    "bulma-carousel": "^4.0.24",
+    "bulma-slider": "^2.0.5",
     "gatsby": "^5.13.7",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",

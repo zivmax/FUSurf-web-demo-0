@@ -8,9 +8,21 @@ importers:
 
   .:
     dependencies:
+      '@iconify/react':
+        specifier: ^5.0.2
+        version: 5.0.2(react@18.3.1)
       '@mdx-js/react':
         specifier: ^3.0.1
         version: 3.0.1(@types/react@18.3.11)(react@18.3.1)
+      bulma:
+        specifier: ^1.0.2
+        version: 1.0.2
+      bulma-carousel:
+        specifier: ^4.0.24
+        version: 4.0.24
+      bulma-slider:
+        specifier: ^2.0.5
+        version: 2.0.5
       gatsby:
         specifier: ^5.13.7
         version: 5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.6.2)
@@ -894,6 +906,14 @@ packages:
   '@humanwhocodes/object-schema@1.2.1':
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     deprecated: Use @eslint/object-schema instead
+
+  '@iconify/react@5.0.2':
+    resolution: {integrity: sha512-wtmstbYlEbo4NDxFxBJkhkf9gJBDqMGr7FaqLrAUMneRV3Z+fVHLJjOhWbkAF8xDQNFC/wcTYdrWo1lnRhmagQ==}
+    peerDependencies:
+      react: '>=16'
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
@@ -1975,6 +1995,15 @@ packages:
 
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
+
+  bulma-carousel@4.0.24:
+    resolution: {integrity: sha512-DLYKmf/iHH8yAQSo8+O/cQvSVSAo15f+XmbiQvAvu5hUJs5O8I40RbZqrF9OougNs4n4JMokPEIBUiDGAsFuRA==}
+
+  bulma-slider@2.0.5:
+    resolution: {integrity: sha512-6woD/1E7q1o5bfEaQjNqpWZaCItC1oHe9bN15WYB2ELqz2gDaJYZkf+rlozGpAYOXQGDQGCCv3y+QuKjx6sQuw==}
+
+  bulma@1.0.2:
+    resolution: {integrity: sha512-D7GnDuF6seb6HkcnRMM9E739QpEY9chDzzeFrHMyEns/EXyDJuQ0XA0KxbBl/B2NTsKSoDomW61jFGFaAxhK5A==}
 
   busboy@1.6.0:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
@@ -7285,6 +7314,13 @@ snapshots:
 
   '@humanwhocodes/object-schema@1.2.1': {}
 
+  '@iconify/react@5.0.2(react@18.3.1)':
+    dependencies:
+      '@iconify/types': 2.0.0
+      react: 18.3.1
+
+  '@iconify/types@2.0.0': {}
+
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
@@ -8586,6 +8622,12 @@ snapshots:
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
+
+  bulma-carousel@4.0.24: {}
+
+  bulma-slider@2.0.5: {}
+
+  bulma@1.0.2: {}
 
   busboy@1.6.0:
     dependencies:
