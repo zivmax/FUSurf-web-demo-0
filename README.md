@@ -1,49 +1,78 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Nerfies Page Starter
 
-## 🚀 Quick start
+This repo is a refactored version of the [Nerfies' Page](https://github.com/nerfies/nerfies.github.io), which feautres a MDX based writing website following the style of [Nerfies' Page](https://nerfies.github.io).
 
-1.  **Create a Gatsby site.**
+This README will guide you through setting up and deploying your site.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Prerequisites
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+Before you begin, ensure you have the following installed:
 
-2.  **Start developing.**
+- **Node.js**: Download and install from [nodejs.org](https://nodejs.org/).
+- **pnpm**: Install via npm with the command:
+  ```bash
+  npm install -g pnpm
+  ```
 
-    Navigate into your new site’s directory and start it up.
+## Getting Started
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### 1. Fork the Repository
 
-3.  **Open the code and start customizing!**
+First, fork the repository to your own GitHub account by clicking the "Fork" button on the repository page.
 
-    Your site is now running at http://localhost:8000!
+### 2. Clone Your Fork
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+Clone your forked repository to your local machine:
 
-4.  **Learn more**
+```bash
+git clone <your-forked-repo-url>
+cd <repository-name>
+```
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+### 3. Install Dependencies
 
-## 🚀 Quick start (Netlify)
+Use pnpm to install the necessary dependencies:
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+```bash
+pnpm install
+```
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+### 4. Modify Content
+
+Edit the content of your site by modifying the `contents/index.mdx` file. This is where you'll write the main content for your academic paper website.
+
+And for previewing your site locally, run the following command:
+
+```bash
+pnpm develop
+```
+
+### 5. Configure the Site
+
+Before deploying, make sure to update the `siteMetadata` (especially `pathPrefix`) in `gatsby-config.mjs` to match your desired URL path:
+
+```javascript
+siteMetadata: {
+  title: `Nerfies Page Starter`,
+  siteUrl: `https://<your-username>.github.io/<repository-name>/`,
+  pathPrefix: `/your-path-prefix`,
+},
+```
+
+### 6. Deploy the Site
+
+To deploy the site, run the following command:
+
+```bash
+pnpm deploy
+```
+
+This will build your site and push the generated files to the `pages` branch of your forked repository.
+
+### 7. Set up the GitHub Pages Branch
+
+Finally, set up the `pages` branch as the source for GitHub Pages in your repository settings:
+
+1. Go to the repository settings.
+2. Click the "Pages" in "Code and automation" section.
+3. Select the `pages` branch as the source.
