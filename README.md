@@ -44,7 +44,7 @@ Edit the content of your site by modifying the `contents/index.mdx` file. This i
 And for previewing your site locally, run the following command:
 
 ```bash
-pnpm develop
+pnpm run develop
 ```
 
 ### 5. Configure the Site
@@ -64,7 +64,7 @@ siteMetadata: {
 To deploy the site, run the following command:
 
 ```bash
-pnpm deploy
+pnpm run deploy
 ```
 
 This will build your site and push the generated files to the `pages` branch of your forked repository.

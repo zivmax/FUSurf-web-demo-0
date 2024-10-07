@@ -1,8 +1,8 @@
 {
-  "name": "none",
+  "name": "nerfies-page-stater",
   "version": "1.0.0",
   "private": true,
-  "description": "none",
+  "description": "Nerfies Page Stater",
   "author": "zivmax",
   "keywords": [
     "gatsby"
@@ -13,7 +13,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public -b pages"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
