@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public -b pages"
+    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public -b pages -f"
   },
   "dependencies": {
     "@iconify/react": "^5.0.2",
