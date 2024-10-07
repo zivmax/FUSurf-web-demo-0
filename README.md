@@ -49,14 +49,14 @@ pnpm run develop
 
 ### 5. Configure the Site
 
-Before deploying, make sure to update the `siteMetadata` (especially `pathPrefix`) in `gatsby-config.mjs` to match your desired URL path:
+Before deploying, make sure to update the `siteMetadata` and `pathPrefix` in `gatsby-config.mjs` to match your desired URL path:
 
 ```javascript
 siteMetadata: {
-  title: `Nerfies Page Starter`,
-  siteUrl: `https://<your-username>.github.io/<repository-name>/`,
-  pathPrefix: `/your-path-prefix`,
+  title: `Nerfies Page Stater`,
+  siteUrl: `https://zivmax.github.io/nerfies-page-stater/`,
 },
+pathPrefix: `/nerfies-page-stater`,
 ```
 
 ### 6. Deploy the Site
