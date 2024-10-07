@@ -8,6 +8,7 @@ const config = {
     siteUrl: `https://zivmax.github.io/nerfies-page-stater/`,
   },
   pathPrefix: `/nerfies-page-stater`,
+  
   flags: {
     DEV_SSR: true,
   },
@@ -19,7 +20,6 @@ const config = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",

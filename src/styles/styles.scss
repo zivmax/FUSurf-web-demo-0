@@ -4,6 +4,23 @@
 @import "./bulma-carousel.min.css";
 @import "./bulma-slider.min.css";
 
+@font-face {
+  font-family: "Noto Sans";
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+  src: url("/fonts/noto-sans-variable-font-wdth-wght.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("/fonts/noto-sans-italic-variable-font-wdth-wght.woff2")
+    format("woff2");
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
 }
@@ -168,7 +185,7 @@ h1 {
   line-height: 1.125;
   font-size: 2rem;
   color: #363636;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 p {

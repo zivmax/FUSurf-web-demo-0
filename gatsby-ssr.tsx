@@ -19,31 +19,5 @@ export const onRenderBody = ({ setHeadComponents }) => {
       crossOrigin="anonymous"
       key="notoSansItalic"
     />,
-    <style key="custom-font-normal">
-      {`
-        @font-face {
-          font-family: "Noto Sans";
-          font-display: swap;
-          font-weight: 100 900;
-          font-style: normal;
-          src: url("${withPrefix(
-            "/fonts/noto-sans-variable-font-wdth-wght.woff2"
-          )}") format("woff2");
-        }
-      `}
-    </style>,
-    <style key="custom-font-italic">
-      {`
-        @font-face {
-          font-family: "Noto Sans";
-          font-display: swap;
-          font-weight: 100 900;
-          font-style: italic;
-          src: url("${withPrefix(
-            "/fonts/noto-sans-italic-variable-font-wdth-wght.woff2"
-          )}") format("woff2");
-        }
-      `}
-    </style>,
   ]);
 };
