@@ -31,7 +31,7 @@ const Interpolation: React.FC<InterpolationProps> = ({
         "0"
       )}.${imageFormat}`;
       const img = new Image();
-      img.src = path;
+      img.src = withPrefix(path);
       images[i] = img;
     }
     setInterpImages(images);
@@ -66,7 +66,7 @@ const Interpolation: React.FC<InterpolationProps> = ({
             <div id="interpolation-image-wrapper">
               <img
                 id="interpolation-image"
-                src={withPrefix(interpImages[currentImageIndex]?.src || "")}
+                src={interpImages[currentImageIndex]?.src || ""}
                 alt="Interpolation Image"
               />
             </div>
