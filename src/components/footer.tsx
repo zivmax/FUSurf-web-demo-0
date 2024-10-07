@@ -18,6 +18,10 @@ const Footer: React.FC = () => (
               .
             </p>
             <p>
+              Source Code{" "}
+              <a href="https://github.com/zivmax/nerfies-page-starter">Here</a>.
+            </p>
+            <p>
               Based on{" "}
               <a href="https://github.com/nerfies/nerfies.github.io">
                 Nerfies' Website
