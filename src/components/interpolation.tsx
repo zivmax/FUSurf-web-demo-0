@@ -1,12 +1,28 @@
 import * as React from "react";
 import bulmaSlider from "bulma-slider/dist/js/bulma-slider.min.js";
 
-const Interpolation: React.FC<{ children?: React.ReactNode }> = ({
-  children,
-}) => {
-  const INTERP_BASE = "/interpolation/stacked";
-  const NUM_INTERP_FRAMES = 82;
+interface InterpolationProps {
+  basePath: string;
+  numFrames: number;
+  startImage: string;
+  endImage: string;
+  sliderSettings?: {
+    step?: number;
+    className?: string;
+  };
+  children?: React.ReactNode;
+}
 
+const Interpolation: React.FC<InterpolationProps> = ({
+  basePath,
+  numFrames,
+  startImage,
+  endImage,
+  sliderSettings = {
+    step: 1,
+    className: "slider is-fullwidth is-large is-info",
+  },
+}) => {
   const [interpImages, setInterpImages] = React.useState<HTMLImageElement[]>(
     []
   );
@@ -14,14 +30,14 @@ const Interpolation: React.FC<{ children?: React.ReactNode }> = ({
 
   React.useEffect(() => {
     const images: HTMLImageElement[] = [];
-    for (let i = 0; i < NUM_INTERP_FRAMES; i++) {
-      const path = `${INTERP_BASE}/${String(i + 1).padStart(6, "0")}.jpg`;
+    for (let i = 0; i < numFrames; i++) {
+      const path = `${basePath}/${String(i + 1).padStart(6, "0")}.jpg`;
       const img = new Image();
       img.src = path;
       images[i] = img;
     }
     setInterpImages(images);
-  }, []);
+  }, [basePath, numFrames]);
 
   React.useEffect(() => {
     if (
@@ -42,7 +58,7 @@ const Interpolation: React.FC<{ children?: React.ReactNode }> = ({
         <div className="columns is-vcentered interpolation-panel">
           <div className="column is-3 has-text-centered">
             <img
-              src="/interpolation/stacked/000001.jpg"
+              src={basePath + startImage}
               className="interpolation-image"
               alt="Interpolate start reference image."
             />
@@ -61,7 +77,7 @@ const Interpolation: React.FC<{ children?: React.ReactNode }> = ({
               id="interpolation-slider"
               step="1"
               min="0"
-              max={(NUM_INTERP_FRAMES - 1).toString()}
+              max={(numFrames - 1).toString()}
               value={currentImageIndex.toString()}
               type="range"
               onChange={handleSliderChange}
@@ -69,7 +85,7 @@ const Interpolation: React.FC<{ children?: React.ReactNode }> = ({
           </div>
           <div className="column is-3 has-text-centered">
             <img
-              src="/interpolation/stacked/000082.jpg"
+              src={basePath + endImage}
               className="interpolation-image"
               alt="Interpolation end reference image."
             />
