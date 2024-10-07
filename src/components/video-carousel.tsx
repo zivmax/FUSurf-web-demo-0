@@ -1,5 +1,6 @@
 import React from "react";
 import bulmaCarousel from "bulma-carousel/dist/js/bulma-carousel.min.js";
+import { withPrefix } from "gatsby";
 
 interface VideoCarouselProps {
   videoPaths: string[];
@@ -38,7 +39,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ videoPaths }) => {
                   playsInline
                   height="100%"
                 >
-                  <source src={path} type="video/mp4" />
+                  <source src={withPrefix(path)} type="video/mp4" />
                 </video>
               </div>
             ))}

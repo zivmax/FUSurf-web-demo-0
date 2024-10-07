@@ -6,8 +6,8 @@ const config = {
   siteMetadata: {
     title: `Nerfies Page Stater`,
     siteUrl: `https://zivmax.github.io/nerfies-page-stater/`,
-    pathPrefix: `/nerfies-page-stater`,
   },
+  pathPrefix: `/nerfies-page-stater`,
   flags: {
     DEV_SSR: true,
   },

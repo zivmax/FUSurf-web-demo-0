@@ -1,4 +1,5 @@
 import React from "react";
+import { withPrefix } from "gatsby";
 
 interface VideoTeaserProps {
   videoSrc: string;
@@ -13,7 +14,7 @@ const VideoTeaser: React.FC<VideoTeaserProps> = ({
     <div className="container is-max-desktop">
       <div className="hero-body">
         <video id="teaser" autoPlay muted loop playsInline height="100%">
-          <source src={videoSrc} type="video/mp4" />
+          <source src={withPrefix(videoSrc)} type="video/mp4" />
         </video>
         <h2 className="subtitle has-text-centered">
           <span className="dnerf">Maecenas</span> {subtitleText}

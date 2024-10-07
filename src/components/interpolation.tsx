@@ -1,15 +1,12 @@
 import * as React from "react";
 import bulmaSlider from "bulma-slider/dist/js/bulma-slider.min.js";
+import { withPrefix } from "gatsby";
 
 interface InterpolationProps {
   basePath: string;
   numFrames: number;
   startImage: string;
   endImage: string;
-  sliderSettings?: {
-    step?: number;
-    className?: string;
-  };
   children?: React.ReactNode;
 }
 
@@ -18,10 +15,6 @@ const Interpolation: React.FC<InterpolationProps> = ({
   numFrames,
   startImage,
   endImage,
-  sliderSettings = {
-    step: 1,
-    className: "slider is-fullwidth is-large is-info",
-  },
 }) => {
   const [interpImages, setInterpImages] = React.useState<HTMLImageElement[]>(
     []
@@ -58,7 +51,7 @@ const Interpolation: React.FC<InterpolationProps> = ({
         <div className="columns is-vcentered interpolation-panel">
           <div className="column is-3 has-text-centered">
             <img
-              src={basePath + startImage}
+              src={withPrefix(basePath + startImage)}
               className="interpolation-image"
               alt="Interpolate start reference image."
             />
@@ -68,7 +61,7 @@ const Interpolation: React.FC<InterpolationProps> = ({
             <div id="interpolation-image-wrapper">
               <img
                 id="interpolation-image"
-                src={interpImages[currentImageIndex]?.src || ""}
+                src={withPrefix(interpImages[currentImageIndex]?.src || "")}
                 alt="Interpolation Image"
               />
             </div>
@@ -85,7 +78,7 @@ const Interpolation: React.FC<InterpolationProps> = ({
           </div>
           <div className="column is-3 has-text-centered">
             <img
-              src={basePath + endImage}
+              src={withPrefix(basePath + endImage)}
               className="interpolation-image"
               alt="Interpolation end reference image."
             />
