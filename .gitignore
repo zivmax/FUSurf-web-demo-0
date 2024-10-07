@@ -6,7 +6,6 @@ contents/*-test.md
 assets/
 public/
 server/
-static/
 .venv/
 .DS_Store
 __MACOSX/
